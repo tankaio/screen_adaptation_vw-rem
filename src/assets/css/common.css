@@ -1,0 +1,46 @@
+[class*='thinline-'] {
+  position: relative;
+}
+[class*='thinline-']::before {
+  content: '';
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+}
+.thinline-top::before {
+  left: 0;
+  top: 0;
+  width: 100%;
+  border-top: 1px solid #ebedf0;
+  transform: scaleY(0.5);
+}
+.thinline-bottom::before {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-bottom: 1px solid #ebedf0;
+  transform: scaleY(0.5);
+}
+.thinline-left::before {
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-left: 1px solid #ebedf0;
+  transform: scaleX(0.5);
+}
+.thinline-right::before {
+  right: 0;
+  top: 0;
+  height: 100%;
+  border-right: 1px solid #ebedf0;
+  transform: scaleX(0.5);
+}
+.thinline-round::before {
+  left: 0;
+  top: 0;
+  border: 1px solid #ebedf0;
+  width: 200%;
+  height: 200%;
+  transform: scale(0.5);
+  transform-origin: top left;
+}

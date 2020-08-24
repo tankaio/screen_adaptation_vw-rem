@@ -1,0 +1,29 @@
+$iconPrefix: xicon;
+
+[class*='#{$iconPrefix}-'] {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@mixin retinaIcon($mult) {
+  .#{$iconPrefix}-wechat {
+    width: 0.6rem;
+    height: 0.6rem;
+    background-image: url(~img/icon/wechat#{$mult}.png);
+  }
+}
+
+@include retinaIcon('');
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 2dppx) {
+  @include retinaIcon('@2x');
+}
+
+// @media only screen and (-webkit-min-device-pixel-ratio: 3),
+//   only screen and (min-device-pixel-ratio: 3),
+//   only screen and (min-resolution: 3dppx) {
+//   @include retinaIcon('@3x');
+// }
